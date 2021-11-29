@@ -27,7 +27,9 @@ convertToNumeric <- function(data){
   data
 }
 plotData <- function(data){
+  png(file="plot1.png",width=480, height=480)
   hist(data$Global_active_power, col="red", xlab="Global Active Power (kilowatts)", main="Global Active Power")
+  dev.off()
 } 
 unzipDataset <- function(){
   unzip("exdata_data_household_power_consumption.zip")
