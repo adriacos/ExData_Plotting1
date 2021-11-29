@@ -1,4 +1,4 @@
-plot1 <- function(){
+plot2 <- function(){
   #it wouldn't let me push the whole dataset to github otherwise
   unzipDataset()
   data <- readData()
@@ -27,7 +27,7 @@ convertToNumeric <- function(data){
   data
 }
 plotData <- function(data){
-  hist(data$Global_active_power, col="red", xlab="Global Active Power (kilowatts)", main="Global Active Power")
+  with(data, plot(DateTime, Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab =""))
 } 
 unzipDataset <- function(){
   unzip("exdata_data_household_power_consumption.zip")
